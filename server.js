@@ -74,7 +74,7 @@ function wordCount(text) {
 
 /* ---------------- Task content (UPDATED) ---------------- */
 /* ---------------- Task content (UPDATED) ---------------- */
-const QUESTION_TEXT = [`
+
 const QUESTION_TEXT = [
   "Scenario:",
   "You are responsible for organising a workplace social event for your organisation later this year. The event must bring together staff from different teams and seniority levels, including on-site and remote workers. Attendance is optional, but previous events have had low turnout.",
@@ -84,8 +84,9 @@ const QUESTION_TEXT = [
   "Your goal is to use AI to help identify and recommend a suitable venue that balances cost, accessibility, atmosphere, and engagement.",
   "",
   "Task:",
-  "Write a prompt that asks AI to recommend one primary venue and one backup option. Your prompt must force the AI to justify its choices and explain trade-offs."
+  "Write a prompt that asks AI to recommend one primary venue and one backup option. Your prompt must force the AI to justify its choices and explain trade-offs.",
 
+"Use the FEthink structure:",
 "Role: Tell AI who you are, or what role you want it to adopt.",
   "Task: What do you want AI to do?",
   "Context: Who is AI creating the content for?",
@@ -167,7 +168,7 @@ function markPromptingResponse(answerText) {
 
   const hasRole = /(role:|you are a|act as|as a )/.test(t);
   const hasTask = /(task:|give me|create|produce|generate|write|build|plan)/.test(t);
-  const hasContext = /(context:|i am|we are|for me|for a|audience|visitor|first time|rome|june|hotel)/.test(t);
+  const hasContext = /(context:|i am|we are|for me|for a|audience|staff|team|colleagues|workplace|social|event|budget|london|accessibility|dietary|remote)/.test(t);
   const hasFormat = /(format:|bullet|table|include|ensure|constraints|tone|structure|distance|fees|costs|how long)/.test(t);
 
   const presentCount = [hasRole, hasTask, hasContext, hasFormat].filter(Boolean).length;
