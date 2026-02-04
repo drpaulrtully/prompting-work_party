@@ -88,16 +88,16 @@ const QUESTION_TEXT = [
   "Task:",
   "Write a prompt that asks AI to recommend one primary venue and one backup option. Your prompt must force the AI to justify its choices and explain trade-offs.",
   "",
-"<strong>Task:</strong>",
+"=== TASK ===",
 "Write a prompt that asks AI to recommend one primary venue and one backup option. Your prompt must force the AI to justify its choices and explain trade-offs.",
 "",
-"<strong>Use the FEthink structure:</strong>",
-"<strong>Role:</strong> Tell AI who you are, or what role you want it to adopt.",
-"<strong>Task:</strong> What do you want AI to do?",
-"<strong>Context:</strong> Who is AI creating the content for?",
-"<strong>Format:</strong> How do you want the AI to present the information (structure, tone) and what constraints are required?",
-  "",
-  "Aim for at least 20 words."
+"=== USE THE FEthink STRUCTURE ===",
+"ROLE: Tell AI who you are, or what role you want it to adopt.",
+"TASK: What do you want AI to do?",
+"CONTEXT: Who is AI creating the content for?",
+"FORMAT: How do you want the AI to present the information (structure, tone) and what constraints are required?",
+"",
+"Aim for at least 20 words."
 ].join("\n");
 
 const TEMPLATE_TEXT = [
