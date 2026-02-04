@@ -75,6 +75,8 @@ function wordCount(text) {
 /* ---------------- Task content (UPDATED) ---------------- */
 /* ---------------- Task content (UPDATED) ---------------- */
 
+/* ---------------- Task content (UPDATED) ---------------- */
+
 const QUESTION_TEXT = [
   "Scenario:",
   "You are responsible for organising a workplace social event for your organisation later this year. The event must bring together staff from different teams and seniority levels, including on-site and remote workers. Attendance is optional, but previous events have had low turnout.",
@@ -85,17 +87,22 @@ const QUESTION_TEXT = [
   "",
   "Task:",
   "Write a prompt that asks AI to recommend one primary venue and one backup option. Your prompt must force the AI to justify its choices and explain trade-offs.",
-
-"Use the FEthink structure:",
-"Role: Tell AI who you are, or what role you want it to adopt.",
+  "",
+  "Use the FEthink structure:",
+  "Role: Tell AI who you are, or what role you want it to adopt.",
   "Task: What do you want AI to do?",
   "Context: Who is AI creating the content for?",
-  "Format: How do you want the AI to present the information (structure, tone) - what specific information (constraints) are you requiring?",
+  "Format: How do you want the AI to present the information (structure, tone) and what constraints are required?",
   "",
   "Aim for at least 20 words."
-].join(\"\\n\");
+].join("\n");
 
-const TEMPLATE_TEXT = ["Role:", "Task:", "Context:", "Format:"].join("\n");
+const TEMPLATE_TEXT = [
+  "Role:",
+  "Task:",
+  "Context:",
+  "Format:"
+].join("\n");
 
 const MODEL_ANSWER = [
   "Role:",
@@ -111,8 +118,7 @@ const MODEL_ANSWER = [
   "Attendees include senior leaders, early-career staff, and remote workers travelling in.",
   "The total budget is £4,000, including venue hire and light catering.",
   "The event will run from 5:30–8:30pm on a weekday.",
-  "Requirements include step-free access, accessible toilets, vegetarian, vegan, halal, and alcohol-free options,",
-  "and easy access from major transport links.",
+  "Requirements include step-free access, accessible toilets, vegetarian, vegan, halal, and alcohol-free options, and easy access from major transport links.",
   "Previous events have suffered from low attendance due to poor location choices and overly formal settings.",
   "",
   "Format:",
